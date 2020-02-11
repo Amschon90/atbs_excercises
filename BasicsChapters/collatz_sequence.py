@@ -1,3 +1,4 @@
+# Chapter 4
 def collatz(number):
     if number % 2 == 0:
         number = number // 2
