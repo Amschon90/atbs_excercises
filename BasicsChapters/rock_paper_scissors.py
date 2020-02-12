@@ -1,4 +1,4 @@
-#Chapter 3
+#Chapter 3 excercise
 import random
 
 psrlist = ["PAPER","SCISSORS","ROCK"]
