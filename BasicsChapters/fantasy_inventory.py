@@ -8,12 +8,18 @@ def displayInventory(inv):
 
 
 def addToInventory(inv, lootlist):
+    for i in dragonLoot:
+        if i not in inv.keys():
+            inv[i] = 1
+        else:
+            inv[i] += 1
 
 
-
-myInventory = {'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}
+myInventory = {'gold coin': 42, 'rope': 1}
 dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
 
 displayInventory(myInventory)
+print()
 addToInventory(myInventory,dragonLoot)
+print()
 displayInventory(myInventory)
