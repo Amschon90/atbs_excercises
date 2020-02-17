@@ -30,4 +30,9 @@ for groups in phoneRegex.findall(text):
 for groups in emailRegex.findall(text):
     matches.append(groups[0])
 
-print(matches)
+if len(matches) > 0:
+    print("Here's the info I extracted:")
+    for i in matches:
+        print(i)
+else:
+    print("Nothing was found.")
