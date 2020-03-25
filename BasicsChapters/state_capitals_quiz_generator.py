@@ -23,12 +23,12 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
 for quizNum in range(3):
 
     # Create quiz & answer key
-    quizFile = open(f'capitalsquiz{quizNum+1}.txt', 'w')
-    answerKeyFile = open(f'capitalsquiz_answers{quizNum+1}.txt', 'w')
+    quizFile = open(f'capitalsquiz{quizNum + 1}.txt', 'w')
+    answerKeyFile = open(f'capitalsquiz_answers{quizNum + 1}.txt', 'w')
 
     # Write out the header
     quizFile.write('Name:\n\nDate:\n\nPeriod:\n\n')
-    quizFile.write((''*20) + f'State Capitals Quiz (Form{quizNum + 1})')
+    quizFile.write((' ' * 20) + f'State Capitals Quiz (Form{quizNum + 1})')
     quizFile.write('\n\n')
 
     # Shuffle the order
@@ -43,10 +43,16 @@ for quizNum in range(3):
         wrongAnswers = list(capitals.values())
         del wrongAnswers[wrongAnswers.index(correctAnswer)]
         wrongAnswers = random.sample(wrongAnswers, 3)
-        answerOptions = wrongAnswers+[correctAnswer]
+        answerOptions = wrongAnswers + [correctAnswer]
         random.shuffle(answerOptions)
 
         # Write the question and answer opts to file
-
+        quizFile.write(f'{questionNum + 1}. What is the capital of {states[questionNum]}?\n')
+        for i in range(4):
+            quizFile.write(f"    {'ABCD'[i]}. { answerOptions[i]}\n")
+        quizFile.write('\n')
 
         # Write the answer key
+        answerKeyFile.write(f"{questionNum + 1}.{'ABCD'[answerOptions.index(correctAnswer)]}\n")
+    quizFile.close()
+    answerKeyFile.close()
