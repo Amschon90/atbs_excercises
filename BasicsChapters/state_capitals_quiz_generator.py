@@ -19,6 +19,7 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
    'Montpelier', 'Virginia': 'Richmond', 'Washington': 'Olympia', 'West Virginia':
    'Charleston', 'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
 
+# Generate 3 quiz files
 for quizNum in range(3):
 
     # Create quiz & answer key
@@ -35,3 +36,17 @@ for quizNum in range(3):
     random.shuffle(states)
 
     # Loop through all 50 making a question for each
+    for questionNum in range(50):
+
+        # Get right and wrong answers
+        correctAnswer = capitals[states[questionNum]]
+        wrongAnswers = list(capitals.values())
+        del wrongAnswers[wrongAnswers.index(correctAnswer)]
+        wrongAnswers = random.sample(wrongAnswers, 3)
+        answerOptions = wrongAnswers+[correctAnswer]
+        random.shuffle(answerOptions)
+
+        # Write the question and answer opts to file
+
+
+        # Write the answer key
