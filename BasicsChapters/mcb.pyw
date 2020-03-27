@@ -3,7 +3,7 @@
 #        py.exe mcb.pyw delete <keyword> - Deletes specified keyword.
 #        py.exe mcb.pyw <keyword> - Loads keyword to clipboard.
 #        py.exe mcb.pyw list - Loads all keywords to clipboard.
-#        py.exe mcb.pyw delete - Deletes all keywords in shelf.
+#        py.exe mcb.pyw delete - Deletes all keywords in the shelf.
 
 import shelve, pyperclip, sys
 
