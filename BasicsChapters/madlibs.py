@@ -24,6 +24,6 @@ for i in range(len(wordsFound)):
 print(sentence)
 
 # Reopen the file and write our new sentence
-sentenceFile = open('C:\\Users\\aschon1\\Documents\\madlibs.txt', 'w')
+sentenceFile = open('C:\\Users\\aschon1\\Documents\\new_madlibs.txt', 'w')
 sentenceFile.write(sentence)
 sentenceFile.close()
