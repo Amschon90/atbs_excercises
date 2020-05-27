@@ -15,6 +15,6 @@ def fileSizeSearch(folder):
                 potentialfreedmemory += filesize
                 filecounter += 1
                 print(f'{filename} has a size of {int(filesize/1000000)}MB and should be deleted or archived.')
-    print(f"\n\nBy deleting these {filecounter} files, you could free up {int(filesize/1000000)}MB of memory.")
+    print(f"By deleting these {filecounter} files, you could free up {int(filesize/1000000)}MB of memory.")
 
 fileSizeSearch(folder)
