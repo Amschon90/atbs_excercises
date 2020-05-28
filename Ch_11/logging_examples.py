@@ -22,6 +22,6 @@ logging.info('The logging module is working.')
 logging.warning('An error message is about to be logged.')
 logging.error('An error has occurred.')
 logging.critical('The program is unable to recover!')
-logging.disable(logging.CRITICAL)       # Turn off logging.
+logging.disable(logging.CRITICAL)       # Turn off logging, CRIT means @ that level and lower.
 logging.critical('The program is unable to recover!')
 logging.error('An error has occurred.')
