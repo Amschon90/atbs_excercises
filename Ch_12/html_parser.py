@@ -19,3 +19,12 @@ print(type(elems[0]))
 print(str(elems[0]))
 print(elems[0].getText())
 print(elems[0].attrs)
+
+# Pull all the <p> elements from the BeautifulSoup object
+pElems = exampleSoup.select('p')
+print('\n\n'+str(pElems[0]))
+print(pElems[0].getText())
+print(str(pElems[1]))
+print(pElems[1].getText())
+print(str(pElems[2]))
+print(pElems[2].getText())
