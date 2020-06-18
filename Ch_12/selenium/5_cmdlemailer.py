@@ -1,7 +1,7 @@
 from selenium import webdriver
 import sys, time, os
 
-# Secrets, shhhh
+# Secrets, shhhhh
 gmailUser = os.environ.get('GMAIL_USER')
 gmailPass = os.environ.get('GMAIL_PASS')
 
