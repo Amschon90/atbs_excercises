@@ -14,7 +14,7 @@ def testLink(linksList):
             print('Dead link found!\n%s' % (exc))
 
 
-url = 'https://ls1tech.com/'
+url = 'https://inventwithpython.com/'
 page = requests.get(url)
 linkSoup = bs4.BeautifulSoup(page.text,'html.parser')
 
@@ -28,8 +28,6 @@ for atag in linkSoup.findAll("a"):
             external_links.append(link)
     else:
         # Internal
-        if link[0] != "/":
-            link = "/"+link
         if link not in internal_links:
             internal_links.append(url+link)
 
